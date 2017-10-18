@@ -1,26 +1,34 @@
-Ionic App Base
+TRIS APP
 ==============
 
-A starting project for Ionic that optionally supports using custom SCSS.
+## Introduzione
 
-## Using this project
+Un semplice progetto basato su Ionic 1 e Angular 1 per giocare a TRIS.
 
-We recommend using the [Ionic CLI](https://github.com/ionic-team/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+### Funzionalità implementate
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+L'utente può navigare tramite menu laterale tra la pagina dove sono descritte le regole del gioco e il form di scelta delle opzioni di gioco.
 
-```bash
-$ npm install -g ionic cordova
-```
+Nel form, l'utente potrà scegliere:
+- Modalità single player contro un'intelligenza artificiale o contro un altro giocatore
+- Nome dei gicatori (solo uno nel caso di singolo giocatore)
+- Livello di difficoltà (solo uno nel caso di singolo giocatore)
+- Dimensione della griglia
 
-Then run:
+Al momento, non tutte le opzioni di gioco sono state sviluppate completamente.
 
-```bash
-$ ionic start myProject tabs --type=ionic1
-```
+Dalla pagina delle regole, è possibile aprire i dettagli di alcune delle varianti tipiche di TRIS.
 
-More info on this can be found on the Ionic [Getting Started](https://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/ionic-team/ionic-cli) repo.
+### Funzionalità da sviluppare
 
-## Issues
+Lo sviluppo di questo prototipo si è concentrato sulla navigazione e strutturazione della applicazione. 
+Gli aspetti "algoritmici" sono stati lasciati in secondo piano.
+Pertanto non è stata sviluppata una AI "avanzata" che, attraverso un algoritmo di Min-MAX, determini la strategia del secondo giocatore. Nel caso l'utente selezioni "HAL 9000", cioè l'intelligenza artificiale "avanzata", l'utente viene indirizzato verso una pagina di cortesia.
 
-Issues have been disabled on this repo. If you do find an issue or have a question, consider posting it on the [Ionic Forum](https://forum.ionicframework.com/). If there is truly an error, follow our guidelines for [submitting an issue](https://ionicframework.com/submit-issue/) to the main Ionic repository.
+Anche l'algoritmo per determinare la vincita nel caso di una griglia 4x4 non è stato inserito, pertanto la scelta della griglia grande è stata disabilitata, benchè la generazione della griglia sulla pagina di gioco consenta le creazione di una griglia di arbitraria dimensione.
+
+
+## Analisi tecnica
+
+
+
