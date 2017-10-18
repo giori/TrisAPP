@@ -1,0 +1,54 @@
+<ion-view view-title="Gioca" >
+  <ion-content>
+    <div class="full-text">
+      <h3>Benvenuto in TrisApp</h3>
+      <p>
+      Seleziona le opzioni di gioco desiderate e buon divertimento!
+      </p>
+    </div>
+
+    <form name="sceltaOpzioniForm" novalidate="" ng-submit="gioca(sceltaOpzioniForm)">
+      
+      <ion-item class="item-select">
+        <ion-label>Tipologia gioco</ion-label>
+        <select ng-model="partita.numeroGiocatori" required>
+          <option value="1">Singolo giocatore</option>
+          <option value="2">Due giocatori</option>
+        </select>
+      </ion-item>  
+
+      <ion-item class="item-input" ng-class="{ 'has-errors' : sceltaOpzioniForm.nome1.$invalid && sceltaOpzioniForm.$submitted, 'no-errors' : sceltaOpzioniForm.nome1.$valid}">
+        <ion-label color="primary">Giocatore 1</ion-label>
+        <input type="text" name="nome1" ng-model="partita.giocatore1" placeholder="Inserisci il nome del giocatore" required></ion-input>
+      </ion-item>
+
+      <ion-item class="item-input" ng-show="partita.numeroGiocatori == '2'" ng-class="{ 'has-errors' : sceltaOpzioniForm.nome2.$invalid && sceltaOpzioniForm.$submitted, 'no-errors' : sceltaOpzioniForm.nome2.$valid}">
+        <ion-label color="primary">Giocatore 2</ion-label>
+        <input type="text" name="nome2" ng-required="partita.numeroGiocatori == '2'" ng-model="partita.giocatore2" placeholder="Inserisci il nome del giocatore"></ion-input>
+      </ion-item>
+
+      <ion-item class="item-select" ng-show="partita.numeroGiocatori == '1'">
+        <ion-label color="primary">Difficoltà AI</ion-label>
+        <select ng-model="partita.livello">
+          <option value="stupid">Scimmia</option>
+          <option value="smart">HAL 9000</option>
+        </select>
+      </ion-item>
+
+      <ion-item class="item-select">
+        <ion-label color="primary">Griglia</ion-label>
+        <select ng-model="partita.griglia" required>
+          <option value="standard">Standard (3x3)</option>
+          <option value="big" disabled>Grande (4x4)</option>
+        </select>
+      </ion-item>
+      
+      <div class="full-text">
+        <button class="button button-full button-positive" type="submit">
+          Gioca
+        </button>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-view>

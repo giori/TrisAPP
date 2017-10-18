@@ -1,0 +1,19 @@
+<ion-view view-title="Regole del gioco">
+  <ion-content>  
+    <div class="full-text">
+      <h3>Un idea semplice...</h3>
+      Si gioca su una griglia quadrata di 3×3.
+      <br>
+      A turno, i giocatori scelgono una cella vuota e vi disegnano il proprio simbolo (di solito un giocatore ha come simbolo una "X" e l'avversario un cerchio). Vince il giocatore che riesce a disporre tre dei propri simboli in linea retta orizzontale, verticale o diagonale. Se la griglia viene riempita senza che nessuno dei giocatori sia riuscito a completare una linea retta di tre simboli, il gioco finisce in parità. Nel caso in cui il gioco finisse in parità, la partita è detta "patta", come nel gioco da tavolo degli scacchi.
+      
+      <h3>...con alcune varianti</h3>
+      
+      <ion-list>
+        <ion-item ng-repeat="variante in varianti" href="#/app/regole/{{variante.id}}">
+          {{variante.title}}
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-content>
+</ion-view>

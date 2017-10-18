@@ -1,0 +1,31 @@
+<ion-view view-title="Partita" hide-back-button="true">
+    <ion-content>
+      <div class="row">
+        <div class="player-box" ng-class="{ 'active' : statoPartita.turno}">
+          Giocatore 1 <br>
+          <span ng-bind="statoPartita.nome1"></span>
+          <i class="ion-person"></i>
+        </div> 
+        <div class="player-box" ng-class="{ 'active' : !statoPartita.turno}">
+          Giocatore 2
+          <span ng-bind="statoPartita.nome2"></span>
+          <i ng-class="{'ion-laptop': !statoPartita.twoPlayers, 'ion-person': statoPartita.twoPlayers}"></i>
+        </div> 
+      </div>
+      
+      <div class="row">
+        <table class="play-field"> 
+          <tr ng-repeat="i in getNumber(statoPartita.dim) track by $index">
+            <td ng-repeat="j in getNumber(statoPartita.dim) track by $index" class="tris-cell" ng-click="setCell($event)" ng-attr-id="{{ $index + '' + $parent.$index }}"></td>         
+          </tr>
+        </table>
+      </div>
+
+      <div class="full-text">
+        <button class="button button-full button-negative" type="button" ng-click="backToHome()" ng-show="!statoPartita.end">
+          Abbandona partita
+        </button>
+      </div>
+
+  </ion-content>
+</ion-view>
