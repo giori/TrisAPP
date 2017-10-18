@@ -26,7 +26,11 @@ Pertanto non è stata sviluppata una AI "avanzata" che, attraverso un algoritmo 
 Anche l'algoritmo per determinare la vincita nel caso di una griglia 4x4 non è stato inserito, pertanto la scelta della griglia grande è stata disabilitata, benchè la generazione della griglia sulla pagina di gioco consenta le creazione di una griglia di arbitraria dimensione.
 
 
+## Sviluppi possibili
 
+Oltre a quanto già presentato, sono possibili i seguenti sviluppi:
+- salvataggio di una partita e ricaricamento: utilizzando il localStorage di Ionic si potrebbe salvare un object di tipo "Match" contenente le info necessarie a ripristinare una partita
+- salvataggio dei risultati per mostrare statistiche di gioco (vittorie contro AI, etc...) 
 
 
 

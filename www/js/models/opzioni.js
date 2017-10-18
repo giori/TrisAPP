@@ -1,3 +1,9 @@
+/* Model per il form di scelta delle opzioni di gioco. 
+- nomi e numero ei giocatori
+- livello difficoltà
+- dimensione griglia
+*/
+
 function Opzioni( ) {
     
     this.giocatore1 = "";

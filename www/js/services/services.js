@@ -1,3 +1,6 @@
+/*  servizio mock per ottenere le informazioni delle varianti del gioco di tris */
+
+
 angular.module('app.services', [])
 
     .factory('VariantiService', function($q) {

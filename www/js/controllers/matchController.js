@@ -72,9 +72,8 @@ angular.module('starter.controllers')
         elem.attr("disabled",true);
         $scope.statoPartita.moveCount++;
 
-        
-  
         if($scope.statoPartita.turno){
+            
             elem.addClass("p1 ion-close");
             
             $scope.statoPartita.matrix[ elem.attr('id')[0] ][ elem.attr('id')[1] ] = 1;
@@ -90,8 +89,7 @@ angular.module('starter.controllers')
                 setTimeout(function(){
                     $ionicLoading.hide();
                     $scope.setCell({'srcElement': result});
-                }, 500);
-                    
+                }, 500);       
             }
     
         }else{
@@ -105,6 +103,7 @@ angular.module('starter.controllers')
      
     };
 
+    // MOSSA CASUALE AI - sceglie randomicamente tra le celle rimanenti
     $scope.findStupidMove = function(){
         var possibleMove = [];
         for(var i = 0; i< $scope.statoPartita.dim; i++){
