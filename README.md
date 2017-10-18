@@ -1,11 +1,9 @@
 TRIS APP
 ==============
 
-## Introduzione
+L'applicazione è basata sul framework Ionic 1 per lo sviluppo di applicazioni ibride. Esso fa uso di Angular.js per la navigazione tra le pagine, il binding tra model e pagina HTML e gestione delle chiamate ai servizi.
 
-Un semplice progetto basato su Ionic 1 e Angular 1 per giocare a TRIS.
-
-### Funzionalità implementate
+## Funzionalità implementate
 
 L'utente può navigare tramite menu laterale tra la pagina dove sono descritte le regole del gioco e il form di scelta delle opzioni di gioco.
 
@@ -19,7 +17,7 @@ Al momento, non tutte le opzioni di gioco sono state sviluppate completamente.
 
 Dalla pagina delle regole, è possibile aprire i dettagli di alcune delle varianti tipiche di TRIS.
 
-### Funzionalità da sviluppare
+## Funzionalità da sviluppare
 
 Lo sviluppo di questo prototipo si è concentrato sulla navigazione e strutturazione della applicazione. 
 Gli aspetti "algoritmici" sono stati lasciati in secondo piano.
@@ -28,7 +26,10 @@ Pertanto non è stata sviluppata una AI "avanzata" che, attraverso un algoritmo 
 Anche l'algoritmo per determinare la vincita nel caso di una griglia 4x4 non è stato inserito, pertanto la scelta della griglia grande è stata disabilitata, benchè la generazione della griglia sulla pagina di gioco consenta le creazione di una griglia di arbitraria dimensione.
 
 
-## Analisi tecnica
+
+
+
+
 
 
 
