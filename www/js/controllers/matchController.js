@@ -42,7 +42,7 @@ angular.module('starter.controllers')
         }
   
        //check anti diag (thanks rampion)
-        if(x + y == $scope.statoPartita.dim - 1){
+        if(parseInt(x) + parseInt(y) == $scope.statoPartita.dim - 1){
             for(var i = 0;i<$scope.statoPartita.dim;i++){
                 if($scope.statoPartita.matrix[i][($scope.statoPartita.dim-1)-i] != p)
                     break;
